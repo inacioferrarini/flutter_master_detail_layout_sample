@@ -5,11 +5,11 @@ import 'package:meta/meta.dart';
 class ItemListing extends StatelessWidget {
   ItemListing({
     required this.itemSelectedCallback,
-    required this.selectedItem,
+    this.selectedItem,
   });
 
   final ValueChanged<Item> itemSelectedCallback;
-  final Item selectedItem;
+  final Item? selectedItem;
 
   @override
   Widget build(BuildContext context) {

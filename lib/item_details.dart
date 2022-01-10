@@ -5,11 +5,11 @@ import 'package:meta/meta.dart';
 class ItemDetails extends StatelessWidget {
   ItemDetails({
     required this.isInTabletLayout,
-    required this.item,
+    this.item,
   });
 
   final bool isInTabletLayout;
-  final Item item;
+  final Item? item;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class ItemDetails extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(item.title),
+        title: Text(item?.title ?? 'No item selected!'),
       ),
       body: Center(child: content),
     );

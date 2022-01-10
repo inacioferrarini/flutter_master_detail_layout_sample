@@ -14,15 +14,14 @@ class MasterDetailContainer extends StatefulWidget {
 class _ItemMasterDetailContainerState extends State<MasterDetailContainer> {
   static const int kTabletBreakpoint = 600;
 
-  // Item _selectedItem;
-  Item _selectedItem = Item(
-    title: 'Item 1',
-    subtitle: 'This is the first item.',
-  );
+  Item? _selectedItem;
+  // Item _selectedItem = Item(s
+  //   title: 'Item 1',
+  //   subtitle: 'This is the first item.',
+  // );
 
   Widget _buildMobileLayout() {
     return ItemListing(
-      selectedItem: _selectedItem,
       itemSelectedCallback: (item) {
         Navigator.push(
           context,
